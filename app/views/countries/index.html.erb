@@ -1,0 +1,19 @@
+<h1>Countries with population greater then <%= @name_search%> </h1>
+
+<table border = 1px>
+	<tr>
+		<th>Country Name</th>
+		<th>Capital</th>
+		<th>Population</th>
+		<th>Latitude, Longitude</th>
+	</tr>
+	<% @country_info.each do |info|%>
+	<tr class=<%=cycle('even','odd')%>>
+		<td><%= info["name"]%></td>
+		<td><%= info["capital"]%></td>
+		<td><%= info["population"]%></td>
+		<td><%= info["latlng"]%></td>
+	</tr>
+	<%end%>
+</table>
+
